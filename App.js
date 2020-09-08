@@ -7,13 +7,18 @@ import ViewImageScreen from './app/screens/ViewImageScreen';
 
 import AppText from './app/components/AppText'
 import AppButton from './app/components/AppButton';
+import Card from './app/components/Card';
+import colors from './app/config/colors';
+import MatchesScreen from './app/screens/MatchesScreen';
+import MessagesScreen from './app/screens/MessagesScreen';
 
 export default function App() {
   return (
-    
+  //  <MatchesScreen />
     // <SafeAreaView style={styles.container}>
       // <ViewImageScreen/>
-      <WelcomeScreen/>
+      // <WelcomeScreen/>
+      <MessagesScreen />
       // <View style={{width:"100%"}} />
     // </SafeAreaView>
   );
