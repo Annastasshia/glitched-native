@@ -9,17 +9,18 @@ import AppText from './app/components/AppText'
 import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
 import colors from './app/config/colors';
-import MatchesScreen from './app/screens/MatchDetailsScreen';
+import MatchDetailsScreen from './app/screens/MatchDetailsScreen';
+import MatchesScreen from './app/screens/MatchesScreen';
 import Screen from './app/components/Screen';
 import MessagesScreen from './app/screens/MessagesScreen';
 import Icon from './app/components/MCIcon';
-import ListItem from './app/components/ListItem';
+import ListUser from './app/components/ListUser';
 import AccountScreen from './app/screens/AccountScreen';
 
 export default function App() {
   return (
-    <AccountScreen></AccountScreen>
-  //  <MatchesScreen />
+    // <AccountScreen/>
+  <MatchesScreen />
     // <SafeAreaView style={styles.container}>
       // <ViewImageScreen/>
       // <WelcomeScreen/>

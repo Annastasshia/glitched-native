@@ -4,7 +4,7 @@ import colors from '../config/colors'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 
-function ListItemDeleteAction({onPress}){
+function ListUserDeleteAction({onPress}){
     return (
         <TouchableWithoutFeedback onPress={onPress}>
             <View style={styles.container}>
@@ -19,7 +19,7 @@ function ListItemDeleteAction({onPress}){
     )
 }
 
-export default ListItemDeleteAction;
+export default ListUserDeleteAction;
 
 const styles = StyleSheet.create({
     container:{

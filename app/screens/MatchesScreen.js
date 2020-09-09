@@ -2,6 +2,8 @@ import React from 'react'
 import { StyleSheet, Text, View, FlatList } from 'react-native'
 
 import Screen from '../components/Screen'
+import Card from '../components/Card'
+import colors from '../config/colors'
 
 const matches = [
     {
@@ -45,7 +47,7 @@ const matches = [
         }
     },
     {
-        id: 2,
+        id: 3,
         name: 'Yuu Watase',
         age: 21,
         image: require('../assets/yuuWatase.jpg'),
@@ -58,7 +60,7 @@ const matches = [
         },
         interests: {
             animeIcon: {
-                image: require('../assets/animeIcon.jpg'),
+                image: require('../assets/animeIcon.png'),
         }
     },
 }
@@ -66,10 +68,24 @@ const matches = [
 
 export default function MatchesScreen() {
     return (
-        <Screen>
-            <FlatList />
+        <Screen style={styles.screen}>
+            <FlatList 
+            data={matches}
+            keyExtractor={match => match.id.toString()}
+            renderItem={({ item }) =>
+                <Card 
+                title={item.name}
+                subTitle={item.age}
+                image={item.image}
+                />
+                }/>
         </Screen>
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    screen: {
+        padding: 20,
+        backgroundColor: colors.purple,
+    }
+})

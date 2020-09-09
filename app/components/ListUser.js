@@ -5,7 +5,7 @@ import Swipeable from 'react-native-gesture-handler/Swipeable';
 
 import colors from "../config/colors";
 
-function ListItem({ title, subTitle, image, IconComponent, onPress, renderRightActions }) {
+function ListUser({ title, subTitle, image, IconComponent, onPress, renderRightActions }) {
   return (
     <Swipeable renderRightActions={renderRightActions}>
     <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ListItem;
+export default ListUser;
