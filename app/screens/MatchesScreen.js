@@ -8,13 +8,13 @@ const matches = [
         id: 1,
         name: 'Kelli Jarrell',
         age: 21,
+        image: require('../assets/kelli.jpg'),
+        bio: 'I like Cats',
         orientation: {
             icon: {
             name: "gender-female",
         },
-        image: require('../assets/kelli.jpg'),
         },
-        bio: 'I like Cats',
         interests: {
             gameIcon: {
                 //MCIcon component
@@ -26,13 +26,13 @@ const matches = [
         id: 2,
         name: 'Henry Cavill',
         age: 21,
+        image: require('../assets/henry.jpg'),
+        bio: 'I am Superman',
         orientation: {
             icon: {
             name: "gender-male",
+            },
         },
-        image: require('../assets/henry.jpg'),
-        },
-        bio: 'I am Superman',
         interests: {
             tabletopIcon: {
                 //FAIcon component 
@@ -43,7 +43,25 @@ const matches = [
                 name:"mask"
             }
         }
-    }
+    },
+    {
+        id: 2,
+        name: 'Yuu Watase',
+        age: 21,
+        image: require('../assets/yuuWatase.jpg'),
+        bio: 'I make manga.',
+        orientation: {
+            icon: {
+                // EIcon component
+            name: "circle",
+            },
+        },
+        interests: {
+            animeIcon: {
+                image: require('../assets/animeIcon.jpg'),
+        }
+    },
+}
 ]
 
 export default function MatchesScreen() {
