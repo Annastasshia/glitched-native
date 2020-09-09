@@ -9,7 +9,7 @@ import AppText from './app/components/AppText'
 import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
 import colors from './app/config/colors';
-import MatchesScreen from './app/screens/MatchesScreen';
+import MatchesScreen from './app/screens/MatchDetailsScreen';
 import Screen from './app/components/Screen';
 import MessagesScreen from './app/screens/MessagesScreen';
 import Icon from './app/components/Icon';
