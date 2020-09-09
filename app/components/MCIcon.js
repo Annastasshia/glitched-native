@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import {MaterialCommunityIcons} from '@expo/vector-icons'
-export default function Icon({name,size = 40,backgroundColor = "#000",iconColor ="#fff"}) {
+import {MaterialCommunityIcons, Entypo, FontAwesome5} from '@expo/vector-icons'
+export default function Icon({name, size = 40, backgroundColor = "#000",iconColor ="#fff"}) {
     return (
         <View style={{
             width: size,

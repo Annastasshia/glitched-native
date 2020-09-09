@@ -12,7 +12,7 @@ import colors from './app/config/colors';
 import MatchesScreen from './app/screens/MatchDetailsScreen';
 import Screen from './app/components/Screen';
 import MessagesScreen from './app/screens/MessagesScreen';
-import Icon from './app/components/Icon';
+import Icon from './app/components/MCIcon';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 

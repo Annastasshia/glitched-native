@@ -3,7 +3,7 @@ import { Text, StyleSheet, View, FlatList, Image} from 'react-native'
 
 import ListItem from '../components/ListItem'
 import Screen from '../components/Screen'
-import Icon from '../components/Icon'
+import Icon from '../components/MCIcon'
 import ListItemSeparator from '../components/ListItemSeparator'
 import colors from '../config/colors'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
