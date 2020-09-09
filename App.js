@@ -10,15 +10,26 @@ import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
 import colors from './app/config/colors';
 import MatchesScreen from './app/screens/MatchesScreen';
+import Screen from './app/components/Screen';
 import MessagesScreen from './app/screens/MessagesScreen';
+import Icon from './app/components/Icon';
+
 
 export default function App() {
   return (
+    <Screen>
+      <Icon 
+        name="email"
+        size={50}
+        backgroundColor="red"
+        iconColor="white" 
+        />
+    </Screen>
   //  <MatchesScreen />
     // <SafeAreaView style={styles.container}>
       // <ViewImageScreen/>
       // <WelcomeScreen/>
-      <MessagesScreen />
+      // <MessagesScreen />
       // <View style={{width:"100%"}} />
     // </SafeAreaView>
   );
