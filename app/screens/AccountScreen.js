@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, FlatList, Image} from 'react-native'
 
-import ListItem from '../components/ListUser'
+import ListUser from '../components/ListUser'
 import Screen from '../components/Screen'
 import Icon from '../components/MCIcon'
 import ListItemSeparator from '../components/ListItemSeparator'
 import colors from '../config/colors'
+import ListUser from '../components/ListUser'
 
 
 const menuItems = [
@@ -67,7 +68,7 @@ function AccountScreen(props) {
                             />
                         </View>
                         <View style={styles.container}>
-                        <ListItem
+                        <ListUser
                             title='Log Out'
                             IconComponent={
                                 <Icon name="logout" backgroundColor={colors.purple}/>

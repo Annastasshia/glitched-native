@@ -19,8 +19,8 @@ import AccountScreen from './app/screens/AccountScreen';
 
 export default function App() {
   return (
-    // <AccountScreen/>
-  <MatchesScreen />
+    <AccountScreen/>
+  // <MatchesScreen />
     // <SafeAreaView style={styles.container}>
       // <ViewImageScreen/>
       // <WelcomeScreen/>
