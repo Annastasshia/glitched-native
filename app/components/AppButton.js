@@ -16,7 +16,7 @@ export default function AppButton({title, onPress, color = "primary"}) {
 const styles = StyleSheet.create({
     button: {
         backgroundColor: colors.primary,
-        borderColor: colors.black,
+        borderColor: colors.medium,
         borderWidth: 3,
         borderRadius: 25,
         justifyContent: 'center',
@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
     },
     text:{
         color: colors.black,
-        fontSize: 18,
-        textTransform: 'uppercase'
+        fontSize: 20,
+        textTransform: 'uppercase',
+        letterSpacing: 2.5
     }
 })
