@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableWithoutFeedback, Image, SafeAreaView } from 'react-native';
 import {useDimensions, useDeviceOrientation} from "@react-native-community/hooks";
 import WelcomeScreen from './app/screens/WelcomeScreen';
@@ -20,6 +20,7 @@ import AccountScreen from './app/screens/AccountScreen';
   // Add the Firebase products that you want to use
 import * as firebase from 'firebase';
 import AppTextInput from './app/components/AppTextInput';
+import AppPicker from './app/components/AppPicker';
 
 export default function App() {
  
@@ -34,15 +35,27 @@ export default function App() {
   //   measurementId: "G-1ECRY6NDPC"
   // };
   
-
+const categories = [
+  { label: "woman", value: 1 },
+  { label: "man", value: 2 },
+  { label: "non-binary", value: 3},
+];
 
   // firebase.initializeApp(firebaseConfig);
-
+  const [category, setCategory] = useState();
   return (
+    
     // <AccountScreen/>
   // <MatchesScreen />
-    <AppTextInput 
-    placeholder="Username" icon="email"/>
+  <Screen>
+    <AppPicker 
+      selectedGender={category}
+      onSelectedGender={item => setCategory(item)}
+      genders={categories} 
+      icon="apps" 
+      placeholder="Category" />
+    <AppTextInput placeholder="Username" icon="email" />
+    </Screen>
       // <ViewImageScreen/>
       // <WelcomeScreen/>
       // <MessagesScreen />
