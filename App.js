@@ -21,6 +21,7 @@ import AccountScreen from './app/screens/AccountScreen';
 import * as firebase from 'firebase';
 import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
+import LoginScreen from './app/screens/LoginScreen';
 
 export default function App() {
  
@@ -47,15 +48,16 @@ const categories = [
     
     // <AccountScreen/>
   // <MatchesScreen />
-  <Screen>
-    <AppPicker 
-      selectedGender={category}
-      onSelectedGender={item => setCategory(item)}
-      genders={categories} 
-      icon="apps" 
-      placeholder="Category" />
-    <AppTextInput placeholder="Username" icon="email" />
-    </Screen>
+  // <Screen>
+  //   <AppPicker 
+  //     selectedGender={category}
+  //     onSelectedGender={item => setCategory(item)}
+  //     genders={categories} 
+  //     icon="apps" 
+  //     placeholder="Category" />
+  //   <AppTextInput placeholder="Username" icon="email" />
+  //   </Screen>
+  <LoginScreen />
       // <ViewImageScreen/>
       // <WelcomeScreen/>
       // <MessagesScreen />
