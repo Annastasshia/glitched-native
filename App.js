@@ -17,14 +17,36 @@ import Icon from './app/components/MCIcon';
 import ListUser from './app/components/ListUser';
 import AccountScreen from './app/screens/AccountScreen';
 
+  // Add the Firebase products that you want to use
+import * as firebase from 'firebase';
+import AppTextInput from './app/components/AppTextInput';
+
 export default function App() {
+ 
+  // const firebaseConfig = {
+  //   apiKey: "AIzaSyDaSVn2BKORUt5j00RDf_xrP0gOB7cY_48",
+  //   authDomain: "glitched-6f146.firebaseapp.com",
+  //   databaseURL: "https://glitched-6f146.firebaseio.com",
+  //   projectId: "glitched-6f146",
+  //   storageBucket: "glitched-6f146.appspot.com",
+  //   messagingSenderId: "934026479717",
+  //   appId: "1:934026479717:web:bf68c1af09a23e6df51e8c",
+  //   measurementId: "G-1ECRY6NDPC"
+  // };
+  
+
+
+  // firebase.initializeApp(firebaseConfig);
+
   return (
     // <AccountScreen/>
   // <MatchesScreen />
-    
+    <AppTextInput 
+    placeholder="Username" icon="email"/>
       // <ViewImageScreen/>
       // <WelcomeScreen/>
       // <MessagesScreen />
+   
   );
 }
 
