@@ -6,7 +6,7 @@ import Screen from '../components/Screen'
 import Icon from '../components/MCIcon'
 import ListItemSeparator from '../components/ListItemSeparator'
 import colors from '../config/colors'
-import ListUser from '../components/ListUser'
+
 
 
 const menuItems = [
@@ -42,7 +42,7 @@ function AccountScreen(props) {
                     <Image style={styles.image} source={require("../assets/background.png")}>
                     </Image> 
                     <View style={styles.container}>
-                    <ListItem
+                    <ListUser
                         title="Anna Ames"
                         subTitle="programmer"
                         image={require('../assets/anna.jpg')}

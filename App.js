@@ -19,14 +19,12 @@ import AccountScreen from './app/screens/AccountScreen';
 
 export default function App() {
   return (
-    <AccountScreen/>
+    // <AccountScreen/>
   // <MatchesScreen />
-    // <SafeAreaView style={styles.container}>
+    
       // <ViewImageScreen/>
       // <WelcomeScreen/>
       // <MessagesScreen />
-      // <View style={{width:"100%"}} />
-    // </SafeAreaView>
   );
 }
 
