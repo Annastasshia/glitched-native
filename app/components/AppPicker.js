@@ -7,10 +7,10 @@ import AppText from './AppText';
 import AppTextInput from './AppTextInput';
 import Screen from './Screen'
 
-import PickerGender from './PickerGender';
+import PickerItem from './PickerItem';
 
 
-export default function AppPicker({ icon, placeholder, genders, onSelectedGender, selectedGender}) {
+export default function AppPicker({ icon, placeholder, items, onSelectedItem, selectedItem}) {
     const [modalVisible,setModalVisible] = useState(false);
     
     return (
@@ -24,7 +24,8 @@ export default function AppPicker({ icon, placeholder, genders, onSelectedGender
             style={styles.icon}
             />}
 
-        <AppText style={styles.text}>{selectedGender ? selectedGender.label : placeholder}</AppText>
+            { selectedItem ? (<AppText style={styles.text}>{selectedItem.label}</AppText> ) : (<AppText style={styles.placeholder}>{placeholder}</AppText>)}
+
             <MaterialCommunityIcons 
             name="chevron-down"
             size={20}
@@ -36,14 +37,14 @@ export default function AppPicker({ icon, placeholder, genders, onSelectedGender
             <Screen>
             <Button title="Close" onPress={()=> setModalVisible(false)} />
             <FlatList
-            data={genders}
+            data={items}
             keyExtractor={(item) => item.value.toString()}
             renderItem={({ item }) => 
-            <PickerGender
+            <PickerItem
             label={item.label}
             onPress={() => {
                 setModalVisible(false);
-                onSelectedGender(item);
+                onSelectedItem(item);
             }}/>}
             />
 
@@ -75,5 +76,10 @@ icon: {
 text:{
     flex: 1,
 },
+placeholder: {
+    color: colors.medium,
+    flex:1,
+    fontSize: 16,
+}
 
 })

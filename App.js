@@ -22,6 +22,7 @@ import * as firebase from 'firebase';
 import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
 import LoginScreen from './app/screens/LoginScreen';
+import ProfileEditScreen from './app/screens/ProfileEditScreen';
 
 export default function App() {
  
@@ -36,14 +37,9 @@ export default function App() {
   //   measurementId: "G-1ECRY6NDPC"
   // };
   
-const categories = [
-  { label: "woman", value: 1 },
-  { label: "man", value: 2 },
-  { label: "non-binary", value: 3},
-];
 
   // firebase.initializeApp(firebaseConfig);
-  const [category, setCategory] = useState();
+ 
   return (
     
     // <AccountScreen/>
@@ -57,7 +53,8 @@ const categories = [
   //     placeholder="Category" />
   //   <AppTextInput placeholder="Username" icon="email" />
   //   </Screen>
-  <LoginScreen />
+  < ProfileEditScreen/>
+  // <LoginScreen />
       // <ViewImageScreen/>
       // <WelcomeScreen/>
       // <MessagesScreen />
