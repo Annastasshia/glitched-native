@@ -23,6 +23,7 @@ import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
 import LoginScreen from './app/screens/LoginScreen';
 import ProfileEditScreen from './app/screens/ProfileEditScreen';
+import AuthNavigation from './app/navigation/AuthNavigator.js';
 
 export default function App() {
  
@@ -42,6 +43,9 @@ export default function App() {
  
   return (
     
+    <NavigationContainer>
+      <AuthNavigator />
+    </NavigationContainer>
     // <AccountScreen/>
   // <MatchesScreen />
   // <Screen>
@@ -53,7 +57,7 @@ export default function App() {
   //     placeholder="Category" />
   //   <AppTextInput placeholder="Username" icon="email" />
   //   </Screen>
-  < ProfileEditScreen/>
+  // < ProfileEditScreen/>
   // <LoginScreen />
       // <ViewImageScreen/>
       // <WelcomeScreen/>
