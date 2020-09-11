@@ -26,6 +26,7 @@ import AppPicker from './app/components/AppPicker';
 import LoginScreen from './app/screens/LoginScreen';
 import ProfileEditScreen from './app/screens/ProfileEditScreen';
 import AuthNavigator from './app/navigation/AuthNavigator.js';
+import AppNav from './app/navigation/AppNav';
 
 export default function App() {
  
@@ -46,7 +47,7 @@ export default function App() {
   return (
     
     <NavigationContainer>
-      <AuthNavigator />
+      <AppNav />
     </NavigationContainer>
     // <AccountScreen/>
   // <MatchesScreen />
