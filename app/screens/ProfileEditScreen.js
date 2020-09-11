@@ -7,6 +7,7 @@ import {
   AppFormField,
   AppFormPicker,
   SubmitButton,
+  FormImagePicker,
 } from "../components/forms";
 
 import Screen from "../components/Screen";
@@ -20,7 +21,7 @@ const validationSchema = Yup.object().shape({
   category: Yup.object().required().nullable().label("Interests"),
   gender: Yup.object().required().nullable().label("Gender"),
   preference: Yup.object().required().nullable().label("Looking for ..."),
-  images: Yup.array().min(1, "Please upload at least one image."),
+  images: Yup.array().min(1, "Please upload one image."),
 });
 
 const genders = [
@@ -106,6 +107,7 @@ function ProfileEditScreen() {
         progress={progress}
         visible={uploadVisible}
       /> */}
+
       <AppText style={styles.title}>Profile Information</AppText>
       <AppForm
         initialValues={{
@@ -120,6 +122,7 @@ function ProfileEditScreen() {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
+        <FormImagePicker name="images" />
         <AppFormField maxLength={255} name="name" placeholder="Name" />
         <AppFormField
           keyboardType="numeric"
