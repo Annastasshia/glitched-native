@@ -17,28 +17,22 @@ const validationSchema = Yup.object().shape({
   name: Yup.string().required().min(1).label("Name"),
   age: Yup.number().required().min(18).max(120).label("Age"),
   bio: Yup.string().label("Bio"),
-  category: Yup.object().required().nullable().label("Interests"),
+  category: Yup.object().required().nullable().label("Category"),
   gender: Yup.object().required().nullable().label("Gender"),
   preference: Yup.object().required().nullable().label("Looking for ..."),
   images: Yup.array().min(1, "Please upload at least one image."),
 });
 
 const genders = [
-  { label: "woman", backgroundColor: "#fc5c65",
-  icon: "gender-female", value: 1 },
-  { label: "man", backgroundColor: "#2bcbba",
-  icon: "gender-male", value: 2 },
-  { label: "non-binary", backgroundColor: "#fed330",
-  icon: "circle", value: 3 },
+  { label: "woman", value: 1 },
+  { label: "man", value: 2 },
+  { label: "non-binary", value: 3 },
 ];
 
 const preferences = [
-  { label: "woman", backgroundColor: "#fc5c65",
-  icon: "gender-female", value: 1 },
-  { label: "man", backgroundColor: "#2bcbba",
-  icon: "gender-male", value: 2 },
-  { label: "human", backgroundColor: "#fed330",
-  icon: "circle", value: 3 },
+  { label: "woman", value: 1 },
+  { label: "man", value: 2 },
+  { label: "human", value: 3 },
 ];
 
 const categories = [
@@ -68,20 +62,20 @@ const categories = [
   },
   {
     backgroundColor: "#2bcbba",
-    icon: "bacteria-outline",
-    label: "Corona",
+    icon: "shoe-heel",
+    label: "Clothing",
     value: 5,
   },
   {
     backgroundColor: "#45aaf2",
     icon: "firefox",
-    label: "Anime / Manga",
+    label: "anime",
     value: 6,
   },
   {
     backgroundColor: "#4b7bec",
     icon: "minecraft",
-    label: "Creeping",
+    label: "Minecraft",
     value: 7,
   },
   {
@@ -133,7 +127,7 @@ function ProfileEditScreen() {
           name="category"
           numberOfColumns={3}
           PickerItemComponent={CategoryPickerItem}
-          placeholder="Interests"
+          placeholder="Category"
         />
         <AppFormPicker
           items={genders}
@@ -145,7 +139,6 @@ function ProfileEditScreen() {
         <AppFormPicker
           items={preferences}
           name="preference"
-          PickerItemComponent={CategoryPickerItem}
           placeholder="Looking for ..."
           width="50%"
         />
