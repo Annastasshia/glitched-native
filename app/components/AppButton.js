@@ -16,8 +16,9 @@ export default function AppButton({title, onPress, color = "primary"}) {
 const styles = StyleSheet.create({
     button: {
         backgroundColor: colors.primary,
-        borderColor: colors.light,
-        borderWidth: 3,
+        shadowColor: "black",
+        shadowOffset: {  width: 5,  height: 5,  },
+        shadowOpacity: .5,
         borderRadius: 25,
         justifyContent: 'center',
         alignItems:'center',

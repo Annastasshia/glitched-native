@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Image} from "react-native";
 import * as Yup from "yup";
 
 import Screen from "../components/Screen";
+import AppText from "../components/AppText";
 // import usersApi from "../api/users";
 // import authApi from "../api/auth";
 // import useAuth from "../auth/useAuth";
@@ -50,6 +51,10 @@ function RegisterScreen() {
     <>
       {/* <ActivityIndicator visible={registerApi.loading || loginApi.loading} /> */}
       <Screen style={styles.container}>
+
+      <Image style={styles.logo} source={require("../assets/logo512.png")} />
+      <AppText style={styles.text}>Register to find your Player 2!</AppText>
+
         <AppForm
           initialValues={{ name: "", email: "", password: "" }}
           // onSubmit={handleSubmit}
@@ -90,6 +95,16 @@ function RegisterScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
+  },
+  logo: {
+    width: 120,
+    height: 120,
+    alignSelf: "center",
+    marginTop: 50,
+  },
+  text: {
+    alignSelf: "center",
+    marginBottom: 20,
   },
 });
 
