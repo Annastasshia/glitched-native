@@ -11,7 +11,7 @@ function WelcomeScreen({ navigation }) {
             <Image style={styles.logo} source={require("../assets/logo512.png")}></Image>
             <View style={styles.buttonsContainer}>
             <AppButton title="Login" onPress={() => navigation.navigate("Login")}/>
-            <AppButton title="Register" onPress={() => navigation.navigate("Register")}/>color="secondary" />
+            <AppButton title="Register" onPress={() => navigation.navigate("Register")} color="secondary" />
             </View>
             
         </ImageBackground>

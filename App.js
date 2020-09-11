@@ -4,6 +4,8 @@ import { StyleSheet, Text, View, TouchableWithoutFeedback, Image, SafeAreaView }
 import {useDimensions, useDeviceOrientation} from "@react-native-community/hooks";
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
+import { createStackNavigator } from '@react-navigation/stack'
+import { NavigationContainer } from "@react-navigation/native";
 
 import AppText from './app/components/AppText'
 import AppButton from './app/components/AppButton';
@@ -23,7 +25,7 @@ import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
 import LoginScreen from './app/screens/LoginScreen';
 import ProfileEditScreen from './app/screens/ProfileEditScreen';
-import AuthNavigation from './app/navigation/AuthNavigator.js';
+import AuthNavigator from './app/navigation/AuthNavigator.js';
 
 export default function App() {
  
