@@ -113,7 +113,7 @@ function ProfileEditScreen(){
           maxLength={3}
           name="age"
           placeholder="age"
-          width={120}
+          width='25%'
         />
         <AppFormPicker
           items={categories}
@@ -124,11 +124,13 @@ function ProfileEditScreen(){
           items={genders}
           name="Gender"
           placeholder="Gender"
+          width="50%"
         />
          <AppFormPicker
           items={preferences}
           name="preference"
           placeholder="Looking for ..."
+          width="50%"
         />
         <AppFormField
           maxLength={1000}
