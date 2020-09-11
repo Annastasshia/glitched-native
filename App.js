@@ -53,11 +53,12 @@ export default function App() {
   //     placeholder="Category" />
   //   <AppTextInput placeholder="Username" icon="email" />
   //   </Screen>
-  < ProfileEditScreen/>
+  // < ProfileEditScreen/>
   // <LoginScreen />
       // <ViewImageScreen/>
       // <WelcomeScreen/>
-      // <MessagesScreen />
+      <MessagesScreen />
+      
    
   );
 }
