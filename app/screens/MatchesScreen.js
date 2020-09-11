@@ -11,6 +11,7 @@ const matches = [
         name: 'Kelli Jarrell',
         age: 21,
         image: require('../assets/kelli.jpg'),
+        preference: 'male',
         bio: 'I like Cats',
         orientation: {
             icon: {
@@ -30,6 +31,7 @@ const matches = [
         age: 21,
         image: require('../assets/henry.jpg'),
         bio: 'I am Superman',
+        preference: 'female',
         orientation: {
             icon: {
             name: "gender-male",
@@ -52,6 +54,7 @@ const matches = [
         age: 21,
         image: require('../assets/yuuWatase.jpg'),
         bio: 'I make manga.',
+        preference: 'none',
         orientation: {
             icon: {
                 // EIcon component
