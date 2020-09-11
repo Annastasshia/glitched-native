@@ -30,7 +30,7 @@ const matches = [
         name: 'Henry Cavill',
         age: 21,
         image: require('../assets/henry.jpg'),
-        bio: 'I am Superman',
+        bio: 'I am the Witcher',
         preference: 'female',
         orientation: {
             icon: {
