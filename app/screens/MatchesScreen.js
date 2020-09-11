@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, FlatList } from 'react-native'
 import Screen from '../components/Screen'
 import Card from '../components/Card'
 import colors from '../config/colors'
+import AppNav from '../navigation/AppNav'
 
 const matches = [
     {
@@ -19,7 +20,7 @@ const matches = [
         },
         },
         interests: {
-            gameIcon: {
+            icon: {
                 //MCIcon component
                 name:"gamepad-square-outline"
             }
@@ -38,11 +39,11 @@ const matches = [
             },
         },
         interests: {
-            tabletopIcon: {
+            icon: {
                 //FAIcon component 
                 name:"dice-d20" 
             },
-            comicIcon: {
+            icon: {
                 //EIcon component 
                 name:"mask"
             }
@@ -62,7 +63,7 @@ const matches = [
             },
         },
         interests: {
-            animeIcon: {
+            icon: {
                 image: require('../assets/animeIcon.png'),
         }
     },
@@ -80,9 +81,14 @@ export default function MatchesScreen() {
                 title={item.name}
                 subTitle={item.age}
                 image={item.image}
+                icon={item.interests.icon.name}
                 />
                 }/>
+            <>
+            <AppNav />
+            </>
         </Screen>
+        
     )
 }
 

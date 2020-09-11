@@ -47,7 +47,7 @@ export default function App() {
   return (
     
     <NavigationContainer>
-      <AppNav />
+      <AuthNavigator />
     </NavigationContainer>
     // <AccountScreen/>
   // <MatchesScreen />
