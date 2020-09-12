@@ -19,9 +19,16 @@ const initialMessages = [
     },
     {
         id: 2,
-        title: 'Annastasshia',
+        title: 'Henry',
         description: 'Listen!',
-        image: require('../assets/anna.jpg')
+        image: require('../assets/henry.jpg')
+
+    },
+    {
+        id: 3,
+        title: 'Yuu',
+        description: 'Cake is a Lie',
+        image: require('../assets/yuuWatase.jpg')
 
     }
 ]
@@ -62,10 +69,24 @@ export default function MessagesScreen() {
                onRefresh={() => {
                    setMessages([
                     {
-                        id: 3,
+                        id: 4,
                         title: 'Taylour',
                         description: 'Its dangerous to go alone',
                         image: require('../assets/taylour.jpg')
+                
+                    },
+                    {
+                        id: 3,
+                        title: 'Yuu',
+                        description: ':)',
+                        image: require('../assets/yuuWatase.jpg')
+                
+                    },
+                    {
+                        id: 2,
+                        title: 'Henry',
+                        description: 'Listen!',
+                        image: require('../assets/henry.jpg')
                 
                     }
                    ])

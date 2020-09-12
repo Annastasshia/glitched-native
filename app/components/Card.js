@@ -8,12 +8,15 @@ import Icon from "../components/MCIcon";
 export default function Card({
   title,
   subTitle,
+  bio,
   image,
   icon,
-  name,
+  icon2,
   onPress,
   renderRightActions,
   renderLeftActions,
+  backgroundColor1,
+  backgroundColor2
 }) {
   return (
     <Swipeable renderRightActions={renderRightActions} renderLeftActions={renderLeftActions}>
@@ -23,7 +26,13 @@ export default function Card({
       <View style={styles.detailsContainer}>
         <AppText style={styles.title}>{title}</AppText>
         <AppText style={styles.subTitle}>Age: {subTitle}</AppText>
-        {icon && <Icon name={icon} size={40}></Icon>}
+  <AppText style={styles.bio}>{bio}</AppText>
+        <View style={styles.icons}>
+        <Icon name={icon} size={40} backgroundColor={backgroundColor1}></Icon>
+        <View style={styles.iconic} >
+        <Icon name={icon2} size={40} backgroundColor={backgroundColor2}></Icon>
+        </View>
+        </View>
       </View>
     </View>
     </TouchableHighlight>
@@ -41,6 +50,18 @@ const styles = StyleSheet.create({
   detailsContainer: {
     padding: 20,
   },
+  icons:{
+    flexDirection: 'row',
+    // paddingLeft: 10,
+    paddingTop:5,
+    
+    paddingBottom:5,
+  },
+  iconic:{
+    marginRight: 10,
+    marginLeft: 10,
+    
+},
   image: {
     width: "100%",
     height: 350,

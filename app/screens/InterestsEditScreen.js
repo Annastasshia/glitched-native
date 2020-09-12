@@ -24,15 +24,21 @@ const validationSchema = Yup.object().shape({
 });
 
 const genders = [
-  { label: "woman", value: 1 },
-  { label: "man", value: 2 },
-  { label: "non-binary", value: 3 },
+  { label: "woman", backgroundColor: "#52BE80",
+  icon: "gender-female", value: 1 },
+  { label: "man", backgroundColor: "#F4D03F",
+  icon: "gender-male", value: 2 },
+  { label: "non-binary", backgroundColor: "#fc5c65",
+  icon: "circle", value: 3 },
 ];
 
 const preferences = [
-  { label: "woman", value: 1 },
-  { label: "man", value: 2 },
-  { label: "human", value: 3 },
+  { label: "woman", backgroundColor: "#52BE80",
+  icon: "gender-female", value: 1 },
+  { label: "man", backgroundColor: "#F4D03F",
+  icon: "gender-male", value: 2 },
+  { label: "human", backgroundColor: "#fc5c65",
+  icon: "circle", value: 3 },
 ];
 
 const categories = [
@@ -138,6 +144,7 @@ function ProfileEditScreen() {
         <AppFormPicker
           items={preferences}
           name="preference"
+          PickerItemComponent={CategoryPickerItem}
           placeholder="Looking for ..."
           width="50%"
         />

@@ -13,43 +13,38 @@ const initialMatches = [
         name: 'Kelli Jarrell',
         age: 21,
         image: require('../assets/kelli.jpg'),
-        preference: 'male',
-        bio: 'I like Cats',
+        bio: 'I love cats!',
+        preference: 'none',
         orientation: {
             icon: {
-            name: "gender-female",
+            name: "female",
+            },
         },
-        },
-        interests: {
-            icon: {
-                //MCIcon component
-                name:"gamepad-square-outline"
-            }
-        }
+        icon1: "death-star-variant",
+        color1: "#fd9644",
+        icon2: "controller-classic-outline",
+        color2: "#fc5c65",
+    
     },
     {
         id: 2,
         name: 'Henry Cavill',
         age: 21,
         image: require('../assets/henry.jpg'),
-        bio: 'I am the Witcher',
-        preference: 'female',
+        bio: 'Cavill sounds like travel',
+        preference: 'none',
         orientation: {
             icon: {
-            name: "gender-male",
+            name: "male",
             },
         },
-        interests: {
-            icon: {
-                //FAIcon component 
-                name:"dice-d20" 
-            },
-            icon: {
-                //EIcon component 
-                name:"mask"
-            }
-        }
+        icon1: "book-open-variant",
+        color1: "#a55eea",
+        icon2: "controller-classic-outline",
+        color2: "#fc5c65",
+    
     },
+    
     {
         id: 3,
         name: 'Yuu Watase',
@@ -63,12 +58,13 @@ const initialMatches = [
             name: "circle",
             },
         },
-        interests: {
-            icon: {
-                image: require('../assets/animeIcon.png'),
-        }
+        icon1: "firefox",
+        color1: "#45aaf2",
+        icon2: "triforce",
+        color2: "#26de81",
+    
     },
-}
+
 ]
 
 export default function MatchesScreen() {
@@ -89,8 +85,12 @@ export default function MatchesScreen() {
                 <Card 
                 title={item.name}
                 subTitle={item.age}
+                bio={item.bio}
                 image={item.image}
-                icon={item.interests.icon.name}
+                icon={item.icon1}
+                backgroundColor1= {item.color1}
+                icon2={item.icon2}
+                backgroundColor2={item.color2}
                 onPress={() => console.log("Match selected", item)}
                 renderRightActions={() => <MatchUserDelete
                 onPress={() => handleDelete(item)}

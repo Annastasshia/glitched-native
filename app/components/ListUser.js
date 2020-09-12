@@ -24,7 +24,7 @@ function ListUser({
             <AppText style={styles.title}>{title}</AppText>
             {subTitle && <AppText style={styles.subTitle}>{subTitle}</AppText>}
           </View>
-          <MaterialCommunityIcons name="chevron-right" size="25" />
+          <MaterialCommunityIcons name="chevron-right" size= {25} />
         </View>
       </TouchableHighlight>
     </Swipeable>
