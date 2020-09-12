@@ -4,8 +4,7 @@ import { StyleSheet, Text, View, FlatList } from 'react-native'
 import Screen from '../components/Screen'
 import Card from '../components/Card'
 import colors from '../config/colors'
-import AppNav from '../navigation/AppNav'
-import ListUserDeleteAction from '../components/ListUserDeleteAction'
+import MatchUserDelete from '../components/MatchUserDelete'
 import ListUserAddAction from '../components/ListUserAddAction'
 
 const initialMatches = [
@@ -93,7 +92,7 @@ export default function MatchesScreen() {
                 image={item.image}
                 icon={item.interests.icon.name}
                 onPress={() => console.log("Match selected", item)}
-                renderRightActions={() => <ListUserDeleteAction
+                renderRightActions={() => <MatchUserDelete
                 onPress={() => handleDelete(item)}
                 />}
                 renderLeftActions={() => <ListUserAddAction

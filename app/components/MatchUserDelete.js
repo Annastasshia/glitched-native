@@ -24,8 +24,15 @@ export default ListUserDeleteAction;
 const styles = StyleSheet.create({
     container:{
         backgroundColor: colors.danger,
-        width: 80,
-        height:110,
+        width: 100,
+        height:450,
+        borderTopRightRadius: 300,
+        borderBottomRightRadius: 200,
+        borderTopColor: colors.purple,
+        borderTopWidth: 10,
+        borderBottomColor: colors.purple,
+        borderBottomWidth: 10,
+        
        justifyContent: "center",
        alignItems: "center",
     }

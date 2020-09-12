@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, FlatList, Image} from 'react-native'
+import { StyleSheet, View, FlatList, Image} from 'react-native'
+
 
 import ListUser from '../components/ListUser'
 import Screen from '../components/Screen'
@@ -9,13 +10,15 @@ import colors from '../config/colors'
 
 
 
+
 const menuItems = [
     {
         title: "My Profile",
         icon: {
             name: "format-list-bulleted",
             backgroundColor: colors.primary,
-        }
+        },
+        targetScreen: "Profile"
     },
     {
         title: "Matches",
@@ -23,18 +26,20 @@ const menuItems = [
             name: "heart",
             backgroundColor: colors.danger,
         
-        }
+        },
+        targetScreen: "Matches"
     },
     {
         title: "Messages",
         icon: {
             name: "email",
             backgroundColor: colors.secondary,
-        }
+        },
+        targetScreen: "Messages"
     }
 ]
 
-function AccountScreen(props) {
+function AccountScreen( {navigation} ) {
     
         return (
            
@@ -44,8 +49,9 @@ function AccountScreen(props) {
                     <View style={styles.container}>
                     <ListUser
                         title="Anna Ames"
-                        subTitle="programmer"
+                        subTitle="Eater of sprinkles with chopsticks"
                         image={require('../assets/anna.jpg')}
+                        
                     />
                     </View>
                     
@@ -63,6 +69,7 @@ function AccountScreen(props) {
                                     backgroundColor={item.icon.backgroundColor}
                                      />
                                 }
+                                onPress={() => navigation.navigate(item.targetScreen)}
                                  />
                             }
                             />
@@ -70,9 +77,11 @@ function AccountScreen(props) {
                         <View style={styles.container}>
                         <ListUser
                             title='Log Out'
+                            onPress={() => navigation.navigate("LogOut")}
                             IconComponent={
                                 <Icon name="logout" backgroundColor={colors.purple}/>
                             } />
+                            
                         </View>
                     </Screen>
                 
