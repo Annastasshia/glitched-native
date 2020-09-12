@@ -4,12 +4,12 @@ import colors from '../config/colors'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 
-function ListUserDeleteAction({onPress}){
+function ListUserAddAction({onPress}){
     return (
         <TouchableWithoutFeedback onPress={onPress}>
             <View style={styles.container}>
                 <MaterialCommunityIcons
-                    name="heart-broken"
+                    name="heart-outline"
                     size={35}
                     color={colors.white}
                     ></MaterialCommunityIcons>
@@ -19,15 +19,15 @@ function ListUserDeleteAction({onPress}){
     )
 }
 
-export default ListUserDeleteAction;
+export default ListUserAddAction;
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: colors.danger,
+        backgroundColor: colors.secondary,
         width: 100,
         height:450,
-        borderTopRightRadius: 300,
-        borderBottomRightRadius: 200,
+        borderTopLeftRadius: 300,
+        borderBottomLeftRadius: 200,
         borderTopColor: colors.purple,
         borderTopWidth: 10,
         borderBottomColor: colors.purple,

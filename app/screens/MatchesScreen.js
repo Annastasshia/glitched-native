@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, View, FlatList } from 'react-native'
 
 import Screen from '../components/Screen'
 import Card from '../components/Card'
 import colors from '../config/colors'
 import AppNav from '../navigation/AppNav'
+import ListUserDeleteAction from '../components/ListUserDeleteAction'
+import ListUserAddAction from '../components/ListUserAddAction'
 
-const matches = [
+const initialMatches = [
     {
         id: 1,
         name: 'Kelli Jarrell',
@@ -71,6 +73,14 @@ const matches = [
 ]
 
 export default function MatchesScreen() {
+    const [matches, setMatches] = useState(initialMatches);
+    const handleDelete = match => {
+        // Delete messages from Messages array
+        const newMatches = matches.filter(m => m.id !== match.id)
+        setMatches(newMatches);
+        // Call the server Here 
+    }
+
     return (
         <Screen style={styles.screen}>
             <FlatList 
@@ -82,11 +92,17 @@ export default function MatchesScreen() {
                 subTitle={item.age}
                 image={item.image}
                 icon={item.interests.icon.name}
+                onPress={() => console.log("Match selected", item)}
+                renderRightActions={() => <ListUserDeleteAction
+                onPress={() => handleDelete(item)}
+                />}
+                renderLeftActions={() => <ListUserAddAction
+                    onPress={() => handleDelete(item)}
+                    />}
+
                 />
-                }/>
-            <>
-            <AppNav />
-            </>
+            }/>
+            
         </Screen>
         
     )
