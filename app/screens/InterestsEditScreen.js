@@ -12,6 +12,7 @@ import {
 import Screen from "../components/Screen";
 import CategoryPickerItem from "../components/CategoryPickerItem";
 import AppText from "../components/AppText";
+import FormImagePicker from "../components/forms/FormImagePicker";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required().min(1).label("Name"),
@@ -119,6 +120,7 @@ function ProfileEditScreen() {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
+        <FormImagePicker name="images" />
         <AppFormField maxLength={255} name="name" placeholder="Annastasshia Ames" />
         <AppFormField
           keyboardType="numeric"
