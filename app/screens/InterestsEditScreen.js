@@ -15,11 +15,11 @@ import AppText from "../components/AppText";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required().min(1).label("Name"),
-  age: Yup.number().required().min(18).max(120).label("Age"),
+  age: Yup.number().min(18).max(120).label("Age"),
   bio: Yup.string().label("Bio"),
-  category: Yup.object().required().nullable().label("Category"),
-  gender: Yup.object().required().nullable().label("Gender"),
-  preference: Yup.object().required().nullable().label("Looking for ..."),
+  category: Yup.object().nullable().label("Category"),
+  gender: Yup.object().nullable().label("Gender"),
+  preference: Yup.object().nullable().label("Looking for ..."),
   images: Yup.array().min(1, "Please upload at least one image."),
 });
 
@@ -55,15 +55,15 @@ const categories = [
     value: 3,
   },
   {
-    backgroundColor: "#26de81",
+    backgroundColor: "#2bcbba",
     icon: "cards",
     label: "Tabletop Games",
     value: 4,
   },
   {
-    backgroundColor: "#2bcbba",
-    icon: "shoe-heel",
-    label: "Clothing",
+    backgroundColor: "#26de81",
+    icon: "triforce",
+    label: "Zelda",
     value: 5,
   },
   {
@@ -100,7 +100,6 @@ function ProfileEditScreen() {
         progress={progress}
         visible={uploadVisible}
       /> */}
-      <AppText style={styles.title}>Profile Information</AppText>
       <AppForm
         initialValues={{
           name: "",
@@ -114,12 +113,12 @@ function ProfileEditScreen() {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        <AppFormField maxLength={255} name="name" placeholder="Name" />
+        <AppFormField maxLength={255} name="name" placeholder="Annastasshia Ames" />
         <AppFormField
           keyboardType="numeric"
           maxLength={3}
           name="age"
-          placeholder="age"
+          placeholder="31"
           width="25%"
         />
         <AppFormPicker
@@ -127,7 +126,7 @@ function ProfileEditScreen() {
           name="category"
           numberOfColumns={3}
           PickerItemComponent={CategoryPickerItem}
-          placeholder="Category"
+          placeholder="Interests"
         />
         <AppFormPicker
           items={genders}
@@ -147,7 +146,7 @@ function ProfileEditScreen() {
           multiline
           name="bio"
           numberOfLines={3}
-          placeholder="Bio"
+          placeholder="Eater of sprinkles with chopsticks"
         />
         <SubmitButton title="Save" />
       </AppForm>

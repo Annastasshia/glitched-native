@@ -22,7 +22,7 @@ const AppNav = () => (
         <Tab.Screen 
         name= "MatchesScreen" 
         component={MatchesScreen}
-        options={{ headerShown: false }} 
+         
         options={( { navigation } ) => ({
              tabBarButton: () => ( <MatchNavButton
                 onPress={() => navigation.navigate("MatchesScreen")}
