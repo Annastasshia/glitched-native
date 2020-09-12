@@ -46,7 +46,7 @@ in a private chat room.
 
 👤  Annastasshia Ames
 
->Logo Graphics Credit - Kelli Jarrell
+>Logo Graphics Credit - Kelli Jarrell - [@kellijarrell](https://github.com/kellijarrell)
 
 * Website:  https://annastasshia.github.io/glitched-native/
 * Repository: https://github.com/Annastasshia/glitched-native
