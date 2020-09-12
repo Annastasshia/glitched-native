@@ -18,7 +18,7 @@ const AccountNav = () => (
         <Stack.Screen name="Edit" component={ InterestsEditScreen } />
         <Stack.Screen name="Matches" component={ MatchesScreen }/>
         <Stack.Screen name="Messages" component={ MessagesScreen}/>
-        <Stack.Screen name="LogOut" component={ WelcomeScreen } />
+        <Stack.Screen name="LogOut" component={ WelcomeScreen } options={{ headerShown: false }}/>
     </Stack.Navigator>
 );
 
