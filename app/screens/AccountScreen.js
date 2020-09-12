@@ -7,6 +7,7 @@ import Screen from '../components/Screen'
 import Icon from '../components/MCIcon'
 import ListItemSeparator from '../components/ListItemSeparator'
 import colors from '../config/colors'
+import UserHeader from '../components/UserHeader'
 
 
 
@@ -47,7 +48,7 @@ function AccountScreen( {navigation} ) {
                     <Image style={styles.image} source={require("../assets/background.png")}>
                     </Image> 
                     <View style={styles.container}>
-                    <ListUser
+                    <UserHeader
                         title="Anna Ames"
                         subTitle="Eater of sprinkles with chopsticks"
                         image={require('../assets/anna.jpg')}
