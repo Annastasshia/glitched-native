@@ -9,6 +9,8 @@
 
 > A mobile dating application built with React Native & Expo for nerds and geeks looking for love!
 
+View App: https://youtube.com/shorts/x9NXLkh9lP0?feature=share
+
 ## User Story 1
 
 As a person of specific media interests ,
